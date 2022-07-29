@@ -8,33 +8,43 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int HelloWorldDebugMessage = 0;
-    public const int MultiReactiveAssignView = 1;
-    public const int MultiReactiveDestroyed = 2;
-    public const int MultiReactiveView = 3;
-    public const int PokeMolePosition = 4;
-    public const int PokeMoleSprite = 5;
-    public const int PokeMoleTimeout = 6;
-    public const int PokeMoleView = 7;
-    public const int SimpleMovementDirection = 8;
-    public const int SimpleMovementMoveComplete = 9;
-    public const int SimpleMovementMove = 10;
-    public const int SimpleMovementMover = 11;
-    public const int SimpleMovementPosition = 12;
-    public const int SimpleMovementSprite = 13;
-    public const int SimpleMovementView = 14;
+    public const int ContextCommunicationButtonState = 0;
+    public const int ContextCommunicationName = 1;
+    public const int HelloWorldDebugMessage = 2;
+    public const int MultiReactiveAssignView = 3;
+    public const int MultiReactiveDestroyed = 4;
+    public const int MultiReactiveView = 5;
+    public const int PokeMoleAddPoint = 6;
+    public const int PokeMolePosition = 7;
+    public const int PokeMoleSprite = 8;
+    public const int PokeMoleTimeout = 9;
+    public const int PokeMoleView = 10;
+    public const int PokeMoleAddPointListener = 11;
+    public const int PokeMolePositionListener = 12;
+    public const int SimpleMovementDirection = 13;
+    public const int SimpleMovementMoveComplete = 14;
+    public const int SimpleMovementMove = 15;
+    public const int SimpleMovementMover = 16;
+    public const int SimpleMovementPosition = 17;
+    public const int SimpleMovementSprite = 18;
+    public const int SimpleMovementView = 19;
 
-    public const int TotalComponents = 15;
+    public const int TotalComponents = 20;
 
     public static readonly string[] componentNames = {
+        "ContextCommunicationButtonState",
+        "ContextCommunicationName",
         "HelloWorldDebugMessage",
         "MultiReactiveAssignView",
         "MultiReactiveDestroyed",
         "MultiReactiveView",
+        "PokeMoleAddPoint",
         "PokeMolePosition",
         "PokeMoleSprite",
         "PokeMoleTimeout",
         "PokeMoleView",
+        "PokeMoleAddPointListener",
+        "PokeMolePositionListener",
         "SimpleMovementDirection",
         "SimpleMovementMoveComplete",
         "SimpleMovementMove",
@@ -45,14 +55,19 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ContextCommunication.ButtonStateComponent),
+        typeof(ContextCommunication.NameComponent),
         typeof(HelloWorld.DebugMessageComponent),
         typeof(MultiReactive.AssignViewComponent),
         typeof(MultiReactive.DestroyedComponent),
         typeof(MultiReactive.ViewComponent),
+        typeof(PokeMole.AddPointComponent),
         typeof(PokeMole.PositionComponent),
         typeof(PokeMole.SpriteComponent),
         typeof(PokeMole.TimeoutComponent),
         typeof(PokeMole.ViewComponent),
+        typeof(PokeMoleAddPointListenerComponent),
+        typeof(PokeMolePositionListenerComponent),
         typeof(SimpleMovement.DirectionComponent),
         typeof(SimpleMovement.MoveCompleteComponent),
         typeof(SimpleMovement.MoveComponent),

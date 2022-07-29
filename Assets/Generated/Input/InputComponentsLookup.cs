@@ -8,23 +8,29 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
-    public const int MultiReactiveAssignView = 0;
-    public const int MultiReactiveDestroyed = 1;
-    public const int MultiReactiveView = 2;
-    public const int PokeMoleClick = 3;
-    public const int SimpleMovementLeftMouse = 4;
-    public const int SimpleMovementMouseDown = 5;
-    public const int SimpleMovementMousePosition = 6;
-    public const int SimpleMovementMouseUp = 7;
-    public const int SimpleMovementRightMouse = 8;
+    public const int ContextCommunicationClick = 0;
+    public const int ContextCommunicationInputId = 1;
+    public const int MultiReactiveAssignView = 2;
+    public const int MultiReactiveDestroyed = 3;
+    public const int MultiReactiveView = 4;
+    public const int PokeMoleClick = 5;
+    public const int PokeMoleInput = 6;
+    public const int SimpleMovementLeftMouse = 7;
+    public const int SimpleMovementMouseDown = 8;
+    public const int SimpleMovementMousePosition = 9;
+    public const int SimpleMovementMouseUp = 10;
+    public const int SimpleMovementRightMouse = 11;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 12;
 
     public static readonly string[] componentNames = {
+        "ContextCommunicationClick",
+        "ContextCommunicationInputId",
         "MultiReactiveAssignView",
         "MultiReactiveDestroyed",
         "MultiReactiveView",
         "PokeMoleClick",
+        "PokeMoleInput",
         "SimpleMovementLeftMouse",
         "SimpleMovementMouseDown",
         "SimpleMovementMousePosition",
@@ -33,10 +39,13 @@ public static class InputComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ContextCommunication.ClickComponent),
+        typeof(ContextCommunication.InputIdComponent),
         typeof(MultiReactive.AssignViewComponent),
         typeof(MultiReactive.DestroyedComponent),
         typeof(MultiReactive.ViewComponent),
         typeof(PokeMole.ClickComponent),
+        typeof(PokeMole.InputComponent),
         typeof(SimpleMovement.LeftMouseComponent),
         typeof(SimpleMovement.MouseDownComponent),
         typeof(SimpleMovement.MousePositionComponent),

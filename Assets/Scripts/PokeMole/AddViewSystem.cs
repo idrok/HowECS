@@ -40,7 +40,21 @@ namespace PokeMole
                 var entry = new EventTrigger.Entry();
                 entry.eventID = EventTriggerType.PointerClick;
                 entry.callback = new EventTrigger.TriggerEvent();
-                entry.callback.AddListener(OnClickSprite);
+                entry.callback.AddListener((data) =>
+                {
+                    if (e.hasPokeMoleAddPoint)
+                    {
+                        e.ReplacePokeMoleAddPoint(1);  
+                        Debug.Log("replace 1");
+                    }
+                    else
+                    {
+                        e.AddPokeMoleAddPoint(1);
+                        Debug.Log("add 1");
+                        UIMono.AddPoint(1);
+                        e.pokeMoleTimeout.keepTime = 0.1f;
+                    }
+                });
                 et.triggers.Add(entry);
                 
                 go.transform.SetParent(mViewContainer, false);

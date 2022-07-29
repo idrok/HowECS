@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using Entitas.Unity;
 using UnityEngine;
 
 namespace PokeMole
@@ -26,8 +27,9 @@ namespace PokeMole
             {
                 if (entity.pokeMoleTimeout.keepTime < 0)
                 {
-                    entity.RemoveAllComponents();
+                    entity.pokeMoleView.gameObject.Unlink();
                     Object.Destroy(entity.pokeMoleView.gameObject);
+                    entity.Destroy();
                 }
             }
         }

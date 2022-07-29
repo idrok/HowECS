@@ -5,7 +5,7 @@ namespace PokeMole
 {
     public class SpawnSpriteSystem : IExecuteSystem, ICleanupSystem
     {
-        private float SpawnInterval = 6f;
+        private float SpawnInterval = 2f;
         private float DeltaCount = 0;
         private float CountDown = 0;
 
@@ -35,7 +35,7 @@ namespace PokeMole
             {
                 var keepTime = entity.pokeMoleTimeout.keepTime;
                 keepTime -= Time.deltaTime;
-                Debug.Log("keepTime:" + keepTime.ToString());
+                // Debug.Log("keepTime:" + keepTime.ToString());
                 entity.ReplacePokeMoleTimeout(keepTime);
             }
         }
